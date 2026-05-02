@@ -24,7 +24,7 @@ console.log(cities[0]);
 console.log(cities[cities.length - 1]);
 
 
-// 🔎 indexOf and includes
+//indexOf and includes
 
 console.log(cities.indexOf("Mumbai"));
 console.log(cities.indexOf("Kolkata"));
