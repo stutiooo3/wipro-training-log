@@ -1,0 +1,88 @@
+// Random number
+console.log(Math.floor(Math.random() * 50) + 1);
+
+//diff btwn == and ===
+console.log(10 == "10");   // true
+console.log(10 === "10");  // false
+
+//Type Conversion
+let str = "25";
+console.log(Number(str));   // 25
+console.log(String(100));   // "100"
+
+//parseInt and parseFloat
+let decimal = "8.75";
+console.log(parseInt(decimal));   // 8
+console.log(parseFloat(decimal)); // 8.75
+
+//ARRAY BASICS
+
+let cities = ["Delhi", "Mumbai", "Chennai"];
+
+console.log(cities.length);
+console.log(cities[0]);
+console.log(cities[cities.length - 1]);
+
+
+// 🔎 indexOf and includes
+
+console.log(cities.indexOf("Mumbai"));
+console.log(cities.indexOf("Kolkata"));
+
+console.log(cities.includes("Delhi"));
+console.log(cities.includes("Pune"));
+
+
+// push and pop op
+
+cities.push("Kolkata");
+console.log(cities);
+
+cities.pop();
+console.log(cities);
+
+
+// unshift and shift
+
+cities.unshift("Pune");
+console.log(cities);
+
+cities.shift();
+console.log(cities);
+
+
+// splice
+
+let items = ["pen", "pencil", "eraser", "sharpener", "scale"];
+
+console.log(items.splice(1, 2));
+console.log(items);
+
+console.log(items.splice(1, 1));
+console.log(items);
+
+
+// RANDOM INDEX REMOVE
+
+let colors = ["red", "green", "blue", "yellow", "purple"];
+
+let randomIndex = Math.floor(Math.random() * colors.length);
+
+console.log("Removed:", colors.splice(randomIndex, 1));
+console.log(colors);
+
+
+// LOOP SEARCH
+
+let arr = ["A", "B", "C", "D"];
+let target = "C";
+let foundIndex = -1;
+
+for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === target) {
+        foundIndex = i;
+        break;
+    }
+}
+
+console.log("Index:", foundIndex);
