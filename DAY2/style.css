@@ -1,0 +1,29 @@
+body {
+    font-family: Arial;
+    text-align: center;
+    margin-top: 50px;
+}
+
+h2 {
+    color: purple;
+}
+
+p {
+    color: gray;
+}
+
+input {
+    padding: 8px;
+    border: 2px solid black;
+}
+
+button {
+    padding: 10px;
+    background-color: orange;
+    border: none;
+    color: white;
+}
+
+button:hover {
+    background-color: darkorange;
+}
