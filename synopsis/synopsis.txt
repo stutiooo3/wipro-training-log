@@ -1,18 +1,47 @@
-// DAY 1
 
-* Practiced working with basic data types like string and number
-* String operations, logical, arthimathic operations
-* loops
-* basic idea of arrays
+* Basics of variables and data types (string, number, boolean)
+* Storing and using values in variables
+* Difference between == and === (value vs value + type)
+* typeof operator (returns string)
 
-// DAY 2
+* Type conversion using Number(), String()
+* parseInt() and parseFloat() (both return number)
+* Math.random() (0–1, returns number)
+* Math.floor() (returns integer)
 
-* Learned to use arrays for storing multiple values
-* Accessed elements using index and handled out-of-range cases
-* Used array methods like push(), pop(), shift(), unshift()
-* Searched elements using indexOf() and includes()
-* Modified arrays using splice() and retrieved specific elements
-* Practiced string slicing using slice()
-* Applied logic using loops and random index operations
-* Performed type conversion using Number(), String(), parseInt(), parseFloat()
-* Generated random numbers using Math.random() and Math.floor()
+* String operations:
+* Concatenation using +
+* Template literals using backticks (`)
+* toUpperCase() / toLowerCase()
+* trim() (removes spaces)
+* split() (returns array)
+* replace() (returns new string)
+
+* Arrow functions (short function syntax)
+* Strict equality (===) in conditions
+* Destructuring assignment (variable swapping)
+
+* DOM basics:
+* getElementById() (returns element object)
+* .value (returns string from input field)
+
+* Arrays and multiple value handling
+* Index-based access and undefined cases
+
+* Array methods:
+* push(), pop() add/remove at end
+* unshift(), shift() add/remove at beginning
+* indexOf() (returns number)
+* includes() (returns boolean)
+* splice() (returns array of removed elements)
+
+* Higher-order methods:
+* forEach() (returns undefined)
+* map() (returns new array)
+* filter() (returns new array)
+
+* String slicing using slice()
+* Logic using loops and random index operations
+
+* Focus: Data handling and logical operations
+
