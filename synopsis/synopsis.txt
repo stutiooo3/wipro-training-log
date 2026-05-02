@@ -1,0 +1,18 @@
+// DAY 1
+
+* Practiced working with basic data types like string and number
+* String operations, logical, arthimathic operations
+* loops
+* basic idea of arrays
+
+// DAY 2
+
+* Learned to use arrays for storing multiple values
+* Accessed elements using index and handled out-of-range cases
+* Used array methods like push(), pop(), shift(), unshift()
+* Searched elements using indexOf() and includes()
+* Modified arrays using splice() and retrieved specific elements
+* Practiced string slicing using slice()
+* Applied logic using loops and random index operations
+* Performed type conversion using Number(), String(), parseInt(), parseFloat()
+* Generated random numbers using Math.random() and Math.floor()
