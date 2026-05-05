@@ -4,6 +4,17 @@
 * Difference between == and === (value vs value + type)
 * typeof operator (returns string)
 
+git init
+     git add .
+     git commit -m "Initial commit"
+     git branch -M main
+     git remote add origin <your-github-repo-link>
+     git push -u origin main
+
+     git add .
+     git commit -m "Your message"
+     git push origin main
+
 * Type conversion using Number(), String()
 * parseInt() and parseFloat() (both return number)
 * Math.random() (0–1, returns number)
