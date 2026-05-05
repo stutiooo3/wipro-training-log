@@ -15,6 +15,9 @@ git init
      git commit -m "Your message"
      git push origin main
 
+     
+//DAY 2
+
 * Type conversion using Number(), String()
 * parseInt() and parseFloat() (both return number)
 * Math.random() (0–1, returns number)
@@ -57,6 +60,7 @@ git init
 * Focus: Data handling and logical operations
 
 
+//DAY 4
 // Understanding Promises and Asynchronous JavaScript
 
 1. A Promise is used to handle operations that take time, such as fetching data from a server. It has three states:
@@ -83,3 +87,104 @@ Executes a function repeatedly at fixed time intervals and continues running unt
 6. Non-blocking Execution
 JavaScript executes asynchronous code without stopping the rest of the program.
 Promises help manage async operations in a cleaner and more readable way than callbacks.
+
+
+ Example: Promise using setTimeout
+
+function getData() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve("Data received");
+        }, 2000);
+    });
+}
+
+getData()
+    .then(result => console.log(result))
+    .catch(error => console.error(error));
+
+
+* Function returns a Promise
+* setTimeout simulates delay (2 seconds)
+* resolve() sends success data
+* .then() handles success
+* .catch() handles errors (not used here since no reject)
+
+7. Timers in JavaScript
+
+* setTimeout() - runs once after delay
+* setInterval() - runs repeatedly after fixed interval
+
+Example:
+
+setTimeout(() => console.log("Runs once"), 2000);
+
+setInterval(() => console.log("Repeats every 3 sec"), 3000);
+
+8. Fetch API (Getting Data from Server)
+
+The Fetch API is used to request data from an external source (API).
+
+* fetch() returns a Promise
+* Data must be converted into JSON format using .json()
+
+9. Processing API Data
+
+After fetching data, we usually:
+1. Convert response to JSON
+2. Extract required data
+3. Filter specific items
+4. Modify data
+5. Display results
+
+Example: Fetch + Filter + Map
+
+fetch("https://jsonplaceholder.typicode.com/todos")
+    .then(res => res.json())
+    .then(data => data.filter(item => item.id % 2 === 0))
+    .then(data => data.map(item => ({
+        ...item,
+        title: "Updated " + item.title
+    })))
+    .then(data => console.log(data))
+    .catch(err => console.error("Error:", err));
+
+10. Flowchart
+
+fetch() - get data 
+convert to JSON
+filter required items
+transform data (map)
+display output
+handle errors
+
+10. Key Methods Used
+
+* .then()- handles successful result
+* .catch()-handles errors
+* .filter()- selects specific data
+* .map()-modifies or transforms data
+
+11. Working with Multiple APIs
+
+You can use the same pattern with different APIs:
+* Fetch data
+* Convert to JSON
+* Extract array
+* Apply filter
+* Apply map
+* Print result
+
+12. Some public APIs used for practice:
+
+* Cat Facts API
+* Pokémon API
+* Space People API
+* Quotes API
+* Universities API
+* Dog Facts API
+* Crypto API
+* Random Users API
+* Countries API
+* JSONPlaceholder
+
