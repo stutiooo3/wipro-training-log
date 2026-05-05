@@ -45,3 +45,30 @@
 
 * Focus: Data handling and logical operations
 
+
+// Understanding Promises and Asynchronous JavaScript
+
+1. A Promise is used to handle operations that take time, such as fetching data from a server. It has three states:
+* Pending - initial state
+* Resolved (Fulfilled) - operation completed successfully
+* Rejected - operation failed
+
+2. In the 'getData()' function, a Promise is created using 'new Promise()'. It takes two parameters:
+* resolve - called when the task is successful
+* reject - called when an error occurs
+
+3. setTimeout()
+A built-in function used to delay execution of code.
+Runs a function once after a specified time (in milliseconds).
+Commonly used to simulate asynchronous tasks (e.g., API calls).
+
+4. Handling Promises
+.then()- Executes when the Promise is resolved , Receives the result (data)
+.catch()- Executes when the Promise is rejected, Handles errors
+
+5. setInterval()
+Executes a function repeatedly at fixed time intervals and continues running until stopped manually.
+
+6. Non-blocking Execution
+JavaScript executes asynchronous code without stopping the rest of the program.
+Promises help manage async operations in a cleaner and more readable way than callbacks.
