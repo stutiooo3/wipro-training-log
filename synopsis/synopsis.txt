@@ -188,3 +188,134 @@ You can use the same pattern with different APIs:
 * Countries API
 * JSONPlaceholder
 
+//DAY 5
+JavaScript Notes - APIs & OOPs
+
+ 1. Async JavaScript & APIs
+ fetch()
+* Used to make HTTP requests to APIs
+* Returns a Promise
+js
+fetch(url)
+
+2. async / await
+
+* async-makes a function return a Promise
+* await-pauses execution until Promise resolves
+
+js
+async function getData() {
+  let res = await fetch(url);
+  let data = await res.json();
+}
+
+* try...catch
+Handles errors in async code
+
+try {
+  // code
+} catch (err) {
+  console.error(err);
+}
+
+
+ JSON Conversion
+* API response- converted to JS object
+
+js
+await res.json();
+
+
+ 2. Array Methods (Data Processing)
+
+ *filter()
+ Returns elements that satisfy a condition
+
+arr.filter(item => condition)
+
+* map()
+Transforms each element
+
+arr.map(item => newValue)
+
+* reduce()
+ Reduces array to a single value
+
+arr.reduce((acc, curr) => acc + curr, 0)
+
+* Chaining
+ Combining multiple methods
+
+arr.filter(...).map(...)
+
+ 3. Object-Oriented Programming (OOP)
+
+---
+
+* Class
+Blueprint for creating objects
+
+class ClassName { }
+
+* Constructor
+Initializes object properties
+
+constructor(name) {
+  this.name = name;
+}
+
+* Object
+Instance of a class
+
+const obj = new ClassName();
+
+
+ 4. Encapsulation
+
+ Binding data and methods together
+ Restricting direct access to data
+
+# Private Fields
+
+#variable
+* Accessible only inside class
+
+ 5. Abstraction
+
+* Hiding internal implementation
+* Showing only essential functionality
+
+ 6. Inheritance
+
+ One class acquires properties of another
+
+class Child extends Parent
+
+* super Keyword
+ Calls parent constructor or method
+
+super()
+super.method()
+
+ 7. Polymorphism
+Same method name, different behavior
+
+# Method Overriding
+
+class A {
+  show() { }
+}
+
+class B extends A {
+  show() { } // different behavior
+}
+
+
+# API Flow
+fetch - json - process - output
+
+#OOP Flow
+
+Class - Object - Methods - Interaction
+
+
