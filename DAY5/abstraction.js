@@ -41,3 +41,47 @@ class CoffeMachine {
 const myCoffeMachine = new CoffeMachine();
 console.log(myCoffeMachine.brew());
  
+
+// example- atm pin
+
+class ATM {
+    #balance = 1000;
+    #pin = 1234;
+
+    // Public method (what user sees)
+    withdraw(amount, enteredPin) {
+        if (!this.#authenticate(enteredPin)) {
+            console.log("Incorrect PIN");
+            return;
+        }
+
+        if (!this.#hasSufficientBalance(amount)) {
+            console.log("Insufficient balance");
+            return;
+        }
+
+        this.#processWithdrawal(amount);
+        console.log(`Please collect ₹${amount}`);
+    }
+
+    // abstraction
+    #authenticate(pin) {
+        return pin === this.#pin;
+    }
+
+    #hasSufficientBalance(amount) {
+        return amount <= this.#balance;
+    }
+
+    #processWithdrawal(amount) {
+        this.#balance -= amount;
+    }
+
+    checkBalance(pin) {
+        if (this.#authenticate(pin)) {
+            console.log(`Balance: ₹${this.#balance}`);
+        } else {
+            console.log("Incorrect PIN");
+        }
+    }
+}
