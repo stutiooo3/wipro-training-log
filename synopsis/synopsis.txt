@@ -319,3 +319,57 @@ fetch - json - process - output
 Class - Object - Methods - Interaction
 
 
+//DAY 6
+
+* .split()
+Splits string into parts.
+Syntax:
+split("separator")
+
+* .map()
+Runs code for every array item.
+Syntax:
+array.map()
+
+*.filter()
+Keeps matching items only.
+Syntax:
+array.filter()
+
+*.sort()
+Arranges data.
+Ascending
+a - b
+Descending
+b - a
+
+*Number()
+Converts string into number.
+Syntax:
+Number(value)
+
+*isNaN()
+Checks invalid number.
+Syntax:
+isNaN(value)
+
+*Function
+Reusable block of code.
+Syntax:
+function name() {}
+
+*Callback Function
+Function passed inside another function.
+Syntax:
+mainFunction(callback)
+
+*JSON
+JavaScript object format for data.
+
+Convert to JSON String
+JSON.stringify()
+
+Brackets
+SymbolUse( )Functions/conditions{ }Objects/code blocks[ ]Arrays
+
+
