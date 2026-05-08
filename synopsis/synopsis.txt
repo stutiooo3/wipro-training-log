@@ -1,3 +1,4 @@
+//DAY 1
 
 * Basics of variables and data types (string, number, boolean)
 * Storing and using values in variables
@@ -41,6 +42,21 @@ git init
 
 * Arrays and multiple value handling
 * Index-based access and undefined cases
+
+1. TEMPLATE LITERALS
+   Concept: Uses backticks (`) and ${} for cleaner string interpolation.
+   Example:
+   let a = "Himanshu", b = "Anurag";
+   console.log(`Hello ${a} and ${b}!`);
+
+2. ARROW FUNCTIONS
+   Concept: A shorter syntax for writing concise functions.
+   Example:
+   let sum = (x, y) => x + y;
+   console.log(sum(15, 20)); // 35
+
+
+ //DAY 3
 
 * Array methods:
 * push(), pop() add/remove at end
@@ -372,4 +388,38 @@ JSON.stringify()
 Brackets
 SymbolUse( )Functions/conditions{ }Objects/code blocks[ ]Arrays
 
+
+// DAY 7
+
+-PROTOTYPES and SHARED MEMORY
+Adding methods to a constructor's prototype so they are created 
+once and shared by all instances.
+   - Efficiency: Saves memory by not copying methods to every object instance.
+   
+
+- MEMORY MANAGEMENT (STACK VS HEAP)
+   Understanding where different types of data are stored in JS.
+   - Stack: Stores primitives  and function calls.
+   - Heap: Stores complex objects, arrays, and function references.
+   - Copying: Primitives are copied by value; Objects are copied by reference.
+
+- THE SPREAD OPERATOR (...)
+   Expanding or merging arrays and objects into new structures.
+
+- CALLBACKS & HIGHER ORDER FUNCTIONS 
+    Functions that take other functions as arguments (e.g., .forEach()).
+   - Callbacks: Executed after another function finishes.
+   - Anonymous Callbacks: Used for one-time operations inside methods.
+
+-HOISTING & TEMPORAL DEAD ZONE 
+ JavaScript shifts declarations to the top of their scope during compilation.
+*var Hoisting: Declaration moves upward, but the value stays undefined until execution reaches it.
+*let/const Hoisting: They are also hoisted but stay inside the “Temporal Dead Zone” until initialization, and accessing them before that causes a ReferenceError.
+*Function Hoisting: Function declarations are completely hoisted, so they can be called before being written.
+
+-PROTOTYPAL INHERITANCE (OBJECT.CREATE)
+ Objects can directly connect to other objects as prototypes.
+*Object.create(proto): Generates a new object linked to the given prototype.
+*Inheritance: If a property is missing in the child object, JavaScript searches for it in the parent prototype.
+*hasOwnProperty(): Checks whether a property belongs directly to the object instead of coming from the prototype chain.
 
