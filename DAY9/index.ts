@@ -101,6 +101,22 @@ names.addItems("Rohan");
 
 console.log(names.getItem(0), names.getItem(1), names.getItem(2), names.getItem(3)); // undefined for index 3
 
+interface HasLength {
+    length : number;
+}
+
+//Generics with Constraints | extends keyword
+
+function logLength<T extends HasLength>(arg: T) : void{
+    console.log(arg.length);
+}
+
+
+logLength("Hello World");
+logLength([1,2,3]);
+
+// logLength(10); //GIVE ERROR
+
 
 
  
