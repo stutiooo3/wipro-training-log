@@ -88,4 +88,37 @@ type NonFormEvents =
   Exclude<AllEvents, "submit" | "reset">;
 
   // question 8
-//doing
+
+  function safeExecute(fn: Function) {
+  return async (...args: any[]) => {
+    try {
+      return await fn(...args);
+    } catch (error) {
+      console.log("Error");
+      return null;
+    }
+  };
+}
+
+//question 9
+
+interface UserMetadata {
+  createdAt: Date;
+
+  [key: string]:
+    | string
+    | number
+    | boolean
+    | Date;
+}
+
+//question 10
+
+interface Car {
+  make: string;
+  model: string;
+}
+
+type ApiResponse<T> = {
+  [K in keyof T as `DATA_${Uppercase<string & K>}`]: T[K];
+};
