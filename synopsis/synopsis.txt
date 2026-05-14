@@ -1,4 +1,4 @@
-//DAY 1
+//                                   DAY 1
 
 * Basics of variables and data types (string, number, boolean)
 * Storing and using values in variables
@@ -17,7 +17,7 @@ git init
      git push origin main
 
      
-//DAY 2
+//                                         DAY 2
 
 * Type conversion using Number(), String()
 * parseInt() and parseFloat() (both return number)
@@ -56,7 +56,7 @@ git init
    console.log(sum(15, 20)); // 35
 
 
- //DAY 3
+ //                                     DAY 3
 
 * Array methods:
 * push(), pop() add/remove at end
@@ -76,7 +76,7 @@ git init
 * Focus: Data handling and logical operations
 
 
-//DAY 4
+//                                     DAY 4
 // Understanding Promises and Asynchronous JavaScript
 
 1. A Promise is used to handle operations that take time, such as fetching data from a server. It has three states:
@@ -204,7 +204,7 @@ You can use the same pattern with different APIs:
 * Countries API
 * JSONPlaceholder
 
-//DAY 5
+//                                              DAY 5
 JavaScript Notes - APIs & OOPs
 
  1. Async JavaScript & APIs
@@ -265,8 +265,6 @@ arr.reduce((acc, curr) => acc + curr, 0)
 arr.filter(...).map(...)
 
  3. Object-Oriented Programming (OOP)
-
----
 
 * Class
 Blueprint for creating objects
@@ -335,7 +333,7 @@ fetch - json - process - output
 Class - Object - Methods - Interaction
 
 
-//DAY 6
+//                                             DAY 6
 
 * .split()
 Splits string into parts.
@@ -389,7 +387,7 @@ Brackets
 SymbolUse( )Functions/conditions{ }Objects/code blocks[ ]Arrays
 
 
-// DAY 7
+//                                              DAY 7
 
 -PROTOTYPES and SHARED MEMORY
 Adding methods to a constructor's prototype so they are created 
@@ -422,4 +420,336 @@ once and shared by all instances.
 *Object.create(proto): Generates a new object linked to the given prototype.
 *Inheritance: If a property is missing in the child object, JavaScript searches for it in the parent prototype.
 *hasOwnProperty(): Checks whether a property belongs directly to the object instead of coming from the prototype chain.
+
+//                                           DAY 8 and DAY 9
+
+1. Default Parameter :
+Default Parameter in JavaScript allows us to assign a default value to a function parameter if no value or undefined is passed during the function call.
+It helps avoid undefined values and makes the function safer and cleaner.
+e.g. :
+
+function greet(name = "Guest") {
+    console.log("Hello " + name);
+}
+
+greet(); // Hello Guest
+greet("stuti"); // Hello stuti
+
+2. Spread Operator (...) : 
+The Spread Operator is used to expand elements of an array, object, or iterable into individual elements. 
+It is useful for copying arrays, merging arrays, and cloning objects.
+
+e.g. :
+
+const arr1 = [1, 2, 3];
+const arr2 = [...arr1, 4, 5];
+
+console.log(arr2); // [1, 2, 3, 4, 5]
+
+3.Rest Operator (...) :
+The Rest Operator collects multiple elements and combines them into a single array or object.
+ It is mainly used in function parameters and destructuring.
+
+e.g. :
+
+const [first, ...rest] = [10, 20, 30, 40];
+
+console.log(first); // 10
+console.log(rest);  // [20, 30, 40]
+
+4. Rest Parameter : 
+Rest Parameter allows a function to accept an unlimited number of arguments and stores them in an array. It improves flexibility in function design.
+
+e.g. :
+
+function sum(...numbers) {
+    return numbers.reduce((acc, curr) => acc + curr, 0);
+}
+
+console.log(sum(10, 20, 30)); // 60
+
+5. Destructuring : 
+Destructuring is a JavaScript feature used to extract values from arrays or objects and assign them to variables in a shorter and cleaner way.
+
+e.g. :
+
+const person = {
+    name: "stuti",
+    age: 22
+};
+
+const { name, age } = person;
+
+console.log(name); // stuti
+console.log(age);  // 22
+
+6. Position Based Extraction :
+ Position Based Extraction is used in Array Destructuring where values are extracted based on their position (index) in the array.
+
+e.g. :
+
+const colors = ["Red", "Blue", "Green"];
+
+const [first, second] = colors;
+
+console.log(first);  // Red
+console.log(second); // Blue
+
+7. Key Based Extraction :
+ Key Based Extraction is used in Object Destructuring where values are extracted using object property names (keys), not positions.
+
+e.g. :
+
+const student = {
+    name: "stuti",
+    course: "CSE"
+};
+
+const { name, course } = student;
+
+console.log(name);   // stuti
+console.log(course); // CSE
+Async API : Async API is used to handle operations that take time, such as fetching data from a server, without stopping the execution of the program. It works using async and await, making asynchronous code easier to read and manage than Promises.
+
+e.g. :
+
+async function getData() {
+    let response = await fetch("https://api.example.com/data");
+    let data = await response.json();
+    console.log(data);
+}
+
+////////////    TypeScript 
+ TypeScript is a superset of JavaScript that adds static typing, interfaces, classes, and better error checking during development. It helps write safer and more maintainable code.
+
+e.g. :
+
+let username: string = "stuti";
+let age: number = 22;
+
+1. Merge Interface : Interface merging happens when multiple interfaces with the same name are declared.
+ TypeScript automatically combines them into one single interface.
+
+e.g. :
+
+interface User {
+    name: string;
+}
+
+interface User {
+    age: number;
+}
+
+const person: User = {
+    name: "stuti",
+    age: 22
+};
+
+2. Declaration Merging :
+ Declaration Merging is a feature in TypeScript where multiple declarations with the same name are merged into one definition. It commonly works with interfaces, namespaces, and enums.
+
+e.g. :
+
+interface Student {
+    name: string;
+}
+
+interface Student {
+    course: string;
+}
+
+3. Enums :
+ Enums (Enumerations) are used to define a set of named constant values. They improve code readability and make values easier to manage.
+
+e.g. :
+
+enum Role {
+    Admin,
+    User,
+    Guest
+}
+
+let myRole: Role = Role.Admin;
+console.log(myRole); // 0
+
+4. Tuples :
+ Tuples are a special type of array in TypeScript where the number of elements and their data types are fixed in a specific order.
+
+e.g. :
+
+let user: [string, number] = ["stuti", 22];
+
+5. Array	Tuple
+Stores multiple values of same type	Stores fixed values of different types
+Length can change	Length is fixed
+Example: number[]	Example: [string, number]
+
+6. Generics : 
+Generics allow us to create reusable components that work with different data types without losing type safety.
+
+e.g. :
+
+function identity<T>(value: T): T {
+    return value;
+}
+
+console.log(identity<string>("Hello"));
+console.log(identity<number>(100));
+Constraint Generics : Constraint Generics are used when we want to limit the type that a generic can accept using the extends keyword. This ensures only specific types are allowed.
+
+e.g. :
+
+function printLength<T extends { length: number }>(item: T): void {
+    console.log(item.length);
+}
+
+printLength("Hello");
+printLength([1, 2, 3]);
+
+//                                            DAY 10 
+EXPRESS JS
+
+req - Request object sent by client.
+res - Response object sent from server.
+app.get() - Handles GET requests.
+app.post() - Handles POST requests.
+app.listen() - Starts server on specified port.
+res.send() - Sends response to browser/client.
+
+//                                         DAY 11
+
+*TypeScript : A superset of JavaScript that adds types for better error checking and safer code.
+*Types : Specify the datatype of variables, functions, or objects.
+*Tuples : Array with fixed number and type of values.
+let student: [string, number] = ["STUTI", 22];
+*Utility Types : Built-in TypeScript types used to transform existing types.
+*Partial : Converts all properties into optional properties.
+type User = {
+    name: string;
+    age: number;
+};
+
+let user: Partial<User> = {
+    name: "stuti"
+};
+
+*Record : Creates an object with fixed key-value types.
+*Required : Makes all properties mandatory.
+*Pick : Selects only specific properties from a type.
+*Exclude : Removes specific values from a type.
+*type Status = "Success" | "Error" | "Loading";
+
+*type NewStatus = Exclude<Status, "Loading">;
+*Deep Partial : Makes all nested object properties optional recursively.
+type User = {
+    profile: {
+        name: string;
+    };
+};
+
+let user = {
+    profile: {}
+};
+
+*Generics : Same function works with different datatypes.
+function show<T>(value: T) {
+    return value;
+}
+
+show("Hello");
+show(100);
+
+*Union Types : Variable can store multiple datatypes.
+let id: string | number;
+
+id = 101;
+id = "EMP101";
+
+*any : Skips type checking for a variable.
+*never : Represents values that never occur.
+*unknown : Type-safe version of any.
+*Enums : Store fixed constant values.
+enum Role {
+    Admin,
+    User
+}
+
+let person = Role.Admin;
+*Omit : Removes unwanted properties from a type.
+*keyof : Gets all keys of an object type.
+type User = {
+    name: string;
+    age: number;
+};
+
+type Keys = keyof User;
+*typeof : Gets type from variable or object.
+*infer : Extracts hidden type.
+*Template Literal Types : Creates dynamic string types.
+*type Margin = `${number}px`;
+*Type Guard : Checks datatype before using a value.
+let value: string | number = "Hello";
+
+if (typeof value === "string") {
+    console.log(value.toUpperCase());
+}
+
+//                                   DAY 12 - playwright
+
+* Playwright Introduction
+  * End-to-end testing framework used for browser automation.
+  * Supports Chromium, Firefox, and WebKit.
+
+* Installation
+npm init playwright@latest
+
+* Running Test File
+npx playwright test
+
+* Run Specific File
+npx playwright test filename.spec.js
+
+* Basic Test Structure
+
+import { test, expect } from "@playwright/test";
+
+test("Check title", async ({ page }) => {
+    await page.goto("https://example.com");
+});
+
+
+* page.goto()
+  Opens a website URL in browser.
+
+* Locators
+  Used to find elements on webpage.
+
+page.locator("button")
+page.locator("#id")
+page.locator(".class")
+
+* Click Action
+
+await page.click("button");
+
+* Fill Input Field
+await page.fill("#username", "admin");
+
+* Assertions
+ Used to verify expected result.
+
+await expect(page).toHaveTitle("Example");
+
+* Async / Await
+ Handles asynchronous browser actions properly.
+
+* Hooks
+  * beforeEach() runs before every test.
+  * afterEach() runs after every test.
+
+test.beforeEach(async ({ page }) => {
+    await page.goto("https://example.com");
+});
+
+
 
