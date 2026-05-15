@@ -752,4 +752,88 @@ test.beforeEach(async ({ page }) => {
 });
 
 
+//                                   DAY 13       
 
+*Today Topic: Express.js Login Application with Playwright Testing
+*Express.js Login Application
+-Created a simple login page using Express.js.
+-Built frontend with username and password input fields.
+-Connected frontend form with backend validation logic.
+-Used Express.js server to handle login requests.
+
+*Login Validation
+-Checked valid username and password.
+-Displayed success message for correct credentials.
+-Displayed error message for invalid credentials.
+-Added input length validation for username and password fields.
+-Playwright Testing for Login Page
+-Automated login page testing using Playwright.
+
+*Opened login page using:
+
+await page.goto("http://localhost:3000");
+
+* Test Scenarios Covered
+
+1. Valid Login Test
+
+Enter correct username and password.
+Verify successful login message.
+test('Valid Login', async ({ page }) => {
+
+    await page.goto('http://localhost:3000');
+
+    await page.fill('#username', 'admin');
+
+    await page.fill('#password', '1234');
+
+    await page.click('button');
+
+    await expect(page.locator('h1'))
+    .toContainText('Login Successful');
+});
+
+
+2. Invalid Login Test
+
+Enter wrong credentials.
+Verify error message is displayed.
+test('Invalid Login', async ({ page }) => {
+
+    await page.goto('http://localhost:3000');
+
+    await page.fill('#username', 'wrong');
+
+    await page.fill('#password', 'wrong123');
+
+    await page.click('button');
+
+    await expect(page.locator('body'))
+    .toContainText('Invalid Credentials');
+});
+
+
+3. Username Length Validation Test
+
+Enter short username.
+Verify validation message appears.
+test('Username Validation', async ({ page }) => {
+
+    await page.goto('http://localhost:3000');
+
+    await page.fill('#username', 'ab');
+
+    await page.fill('#password', '1234');
+
+    await page.click('button');
+
+    await expect(page.locator('body'))
+    .toContainText('Username too short');
+});
+
+Async/Await in Playwright
+Playwright works asynchronously.
+async and await are used to handle browser actions properly.
+await page.click();
+await page.fill();
+await page.goto();
