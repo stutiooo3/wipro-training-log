@@ -837,3 +837,57 @@ async and await are used to handle browser actions properly.
 await page.click();
 await page.fill();
 await page.goto();
+
+//                                 DAY 14
+
+1.Learned how to capture screenshots manually in Playwright using:
+await page.screenshot({ fullPage: true, path: 'full-page.png' });
+Understood that:
+*page.screenshot() captures the browser screen.
+*fullPage: true captures the complete scrollable page.
+*path defines where the screenshot is stored.
+Manual screenshots are captured even when the test passes.
+
+2.Configured automatic screenshots in playwright.config.js using:
+use: {
+  screenshot: 'only-on-failure',
+}
+3.Learned that Playwright can automatically capture screenshots only when tests fail, without adding screenshot code inside test files.
+Intentionally failed a test case to verify the configuration.
+Observed that Playwright automatically generated screenshots for failed tests.
+Learned that the test-results folder is automatically created after test execution and stores:
+Failure screenshots
+Execution evidence
+Other debugging artifacts
+4.Command used to run tests:
+npx playwright test
+
+
+//                         DAY 15
+
+1. Test Annotations in Playwright modify test behavior without changing the actual test logic.
+*test.skip()
+Skips the test completely.
+Test will not execute.
+*test.fixme()
+Marks a test as broken or pending fix.
+Test will not run.
+*test.fail()
+Marks a test as expected to fail.
+If it fails → Playwright marks it Passed.
+If it passes → Playwright marks it Failed.
+*test.slow()
+Increases the test timeout to 3× the default timeout.
+Useful for slow-loading scenarios.
+*test.setTimeout()
+Sets a custom timeout for a specific test.
+*test.step()
+Divides a test into logical steps for better readability and reporting.
+Helpful in HTML/Allure reports.
+
+Codegen in Playwright
+Codegen is a Playwright feature that records browser actions and automatically generates automation code.
+Command to start:
+npx playwright codegen https://example.com
+Actions performed in the browser are converted into Playwright scripts automatically.
+Helps beginners quickly generate locators and test flow code.
